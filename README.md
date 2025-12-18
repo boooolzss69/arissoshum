@@ -1,54 +1,32 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #e8f5e9;
-  margin: 0;
-  padding: 0;
+function login() {
+  window.location.href = "dashboard.html";
 }
 
-header {
-  background: #2e7d32;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+function previewImage(event) {
+  const preview = document.getElementById("preview");
+  preview.src = URL.createObjectURL(event.target.files[0]);
 
-.login-box {
-  width: 300px;
-  margin: 100px auto;
-  background: white;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-}
+  // Simulasi klasifikasi AI
+  const hasil = [
+    {
+      jenis: "Sampah Plastik",
+      edukasi: "Plastik dapat didaur ulang menjadi pot tanaman atau tas. Jangan dibakar!"
+    },
+    {
+      jenis: "Sampah Organik",
+      edukasi: "Sampah organik bisa dijadikan kompos untuk pupuk alami."
+    },
+    {
+      jenis: "Sampah Kertas",
+      edukasi: "Kertas dapat didaur ulang hingga 5 kali. Kurangi penggunaan kertas."
+    }
+  ];
 
-.login-box input, button {
-  width: 90%;
-  margin: 10px 0;
-  padding: 10px;
-}
+  const random = hasil[Math.floor(Math.random() * hasil.length)];
 
-button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+  document.getElementById("classification").innerText =
+    "Jenis Sampah: " + random.jenis;
 
-.upload-box, .result-box, .sample {
-  background: white;
-  margin: 20px;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-#preview {
-  max-width: 200px;
-  margin-top: 10px;
-  display: block;
-}
-
-.sample img {
-  width: 150px;
-  margin: 10px;
-  border-radius: 5px;
+  document.getElementById("education").innerText =
+    "Edukasi: " + random.edukasi;
 }
