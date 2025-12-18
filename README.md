@@ -1,35 +1,54 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Klasifikasi Sampah & Edukasi</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  background: #e8f5e9;
+  margin: 0;
+  padding: 0;
+}
 
-<header>
-  <h1>♻️ Klasifikasi Sampah Berbasis AI</h1>
-  <p>Edukasi Daur Ulang untuk Lingkungan Bersih</p>
-</header>
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
 
-<section class="upload-box">
-  <h3>Unggah Gambar Sampah</h3>
-  <input type="file" accept="image/*" onchange="previewImage(event)">
-  <img id="preview" />
-</section>
+.login-box {
+  width: 300px;
+  margin: 100px auto;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
 
-<section class="result-box">
-  <h3>Hasil Klasifikasi (Simulasi AI)</h3>
-  <p id="classification">Belum ada gambar</p>
-  <p id="education"></p>
-</section>
+.login-box input, button {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+}
 
-<section class="sample">
-  <h3>Contoh Sampah</h3>
-  <img src="https://images.unsplash.com/photo-1581578017420-2f26cbd35b5d" alt="Sampah Plastik">
-  <img src="https://images.unsplash.com/photo-1605600659873-d808a13e4d2f" alt="Sampah Organik">
-</section>
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.upload-box, .result-box, .sample {
+  background: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#preview {
+  max-width: 200px;
+  margin-top: 10px;
+  display: block;
+}
+
+.sample img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 5px;
+}
