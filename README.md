@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Login - Klasifikasi Sampah AI</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Login | Daur Sampah</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="login-box">
-  <h2>Login</h2>
-  <input type="text" id="username" placeholder="Username">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Masuk</button>
-  <p class="info">Demo login: bebas isi apa saja</p>
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
 </div>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
