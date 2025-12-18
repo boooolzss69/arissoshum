@@ -1,32 +1,20 @@
-function login() {
-  window.location.href = "dashboard.html";
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Klasifikasi Sampah AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function previewImage(event) {
-  const preview = document.getElementById("preview");
-  preview.src = URL.createObjectURL(event.target.files[0]);
+<div class="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Masuk</button>
+  <p class="info">Demo login: bebas isi apa saja</p>
+</div>
 
-  // Simulasi klasifikasi AI
-  const hasil = [
-    {
-      jenis: "Sampah Plastik",
-      edukasi: "Plastik dapat didaur ulang menjadi pot tanaman atau tas. Jangan dibakar!"
-    },
-    {
-      jenis: "Sampah Organik",
-      edukasi: "Sampah organik bisa dijadikan kompos untuk pupuk alami."
-    },
-    {
-      jenis: "Sampah Kertas",
-      edukasi: "Kertas dapat didaur ulang hingga 5 kali. Kurangi penggunaan kertas."
-    }
-  ];
-
-  const random = hasil[Math.floor(Math.random() * hasil.length)];
-
-  document.getElementById("classification").innerText =
-    "Jenis Sampah: " + random.jenis;
-
-  document.getElementById("education").innerText =
-    "Edukasi: " + random.edukasi;
-}
+<script src="script.js"></script>
+</body>
+</html>
